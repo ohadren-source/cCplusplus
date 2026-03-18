@@ -20,7 +20,7 @@ It compiles. It has been tested on 300+ independent machines. The examples in th
 
 This repository is the canonical home of the language.
 
-📄 **[Read the Full Specification — cC++ Dummy Catchup (31-page PDF)](spec/cC++_Dummy_Catchup.pdf)**
+📄 **[Read the Word — cC++ Dummy Catchup (31-page PDF)](spec/cC++_Dummy_Catchup.pdf)**
 
 💻 **[View Source on GitHub](https://github.com/ohadren-source/cCplusplus)**
 
