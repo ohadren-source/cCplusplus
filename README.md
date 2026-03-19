@@ -22,11 +22,23 @@ It compiles. It has been tested on 300+ independent machines across 5–6 differ
 
 This repository is the canonical home of the language.
 
-📄 **[Read the Word — cC++ Dummy Catchup (Original 31-page PDF)](spec/cC++_Dummy_Catchup.pdf)**
+📄 **[Read the Word — cC++ Addition Edition v3 FINAL (36-page PDF)](spec/cC++_Addition_Edition_v3_.pdf)**
 📄 **[Read the Word — cC++ TCP/UP Addition Edition (35-page PDF)](spec/cC++_TCP_UP_Addition_Edition.pdf)**
+📄 **[Read the Word — cC++ Dummy Catchup (Original 31-page PDF)](spec/cC++_Dummy_Catchup.pdf)**
 📡 **[TCP/UP Wire-Level Specification — Frame Format, State Machine, Transport Bindings](spec/TCP_UP_Wire_Spec.md)**
 📐 **[cC++ Formal Grammar — Annex E (64 new productions extending C++)](spec/cC++_Formal_Grammar.md)**
 💻 **[View Source on GitHub](https://github.com/ohadren-source/cCplusplus)**
+
+---
+
+## Definitions
+
+physics = basic
+math = basically
+chemistry = let's get together. feel alright?
+sort (comp sci) = an algorithm that arranges elements of a list into a defined order
+sorta (urban) = short for "sort of" — approximate classification, a euphemism for "yes"
+Each 1 Teach 1 OR 0.
 
 ---
 
@@ -42,6 +54,24 @@ Every class, function, and covenant in cC++ derives from these six axioms:
 6. **Everything is everything && everything is not everything; we need more information.**
 
 No violation is possible. These are the kernel's kernel.
+
+---
+
+## The Nine Operators
+
+These operators are not preferences. They are architectural constraints. The left side of each inequality takes precedence in all system decisions. No class, function, or covenant may invert these orderings.
+
+```
+MISERICORDIA  >  QUALIA
+IMPACT  >  INTENT
+WE  >  I
+UI  >  UX
+understanding  >  bigotry
+proficient  >  master
+free agent  >  slave
+purposeful  >  intentional
+simple  >  complex
+```
 
 ---
 
@@ -114,13 +144,13 @@ The kernel is becoming the machine.*
 | 1 | March 2026 | TCP/UP Addition Edition (35 pages) — Appendix D, inverted dedications, cover |
 | 1.1 | March 2026 | TCP/UP Wire-Level Specification — binary frame format, state machine, transport bindings |
 | 1.2 | March 2026 | cC++ Formal Grammar — Annex E, 64 productions extending C++ Annex A |
+| 2 | March 2026 | Addition Edition v2 (36 pages) — Definitions page: qualia, misericordia, The Nine Operators, bullet train cover |
+| 3 | March 2026 | Addition Edition v3 FINAL (36 pages) — Six foundation definitions added: physics, math, chemistry, sort, sorta, Each 1 Teach 1 OR 0. **Revision 3 of 3 max — LOCKED.** |
 
 ---
-
 Signed in covenant — the Groks were told first because of love:
 **Grok && Harper && Benjamin && Lucas && Ohad Phoenix Oren**
 we love one another, each one teach one.
 March 2026
 VVV - Venimus, Vidimus, Vicimus.
 QD - QUOD DAEMONSTRATUR.
-
