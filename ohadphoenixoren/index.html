@@ -61,16 +61,58 @@
       font-weight: 400;
     }
 
-    header .rate {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 4px 14px;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      letter-spacing: 0.3px;
+    /* ── PRICING TIERS ── */
+    .pricing-tiers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
     }
+
+    .tier {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.8rem;
+      min-width: 180px;
+    }
+
+    .tier-rate {
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .tier-name {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .tier-desc {
+      font-size: 0.72rem;
+      color: var(--text-faint);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .tier-green { border-left: 3px solid #3d9e5e; }
+    .tier-green .tier-rate { color: #5bc882; }
+    .tier-green .tier-name { color: #4aa86a; }
+
+    .tier-yellow { border-left: 3px solid #a08030; }
+    .tier-yellow .tier-rate { color: #e0b040; }
+    .tier-yellow .tier-name { color: #c09030; }
+
+    .tier-red { border-left: 3px solid #8e3030; }
+    .tier-red .tier-rate { color: #d05050; }
+    .tier-red .tier-name { color: #b84040; }
 
     /* ── TABS ── */
     .tabs-wrapper {
@@ -327,6 +369,8 @@
       .projects-grid { grid-template-columns: 1fr; }
       .tabs-wrapper { gap: 0; }
       .tab-btn { padding: 10px 16px; font-size: 0.82rem; }
+      .pricing-tiers { flex-direction: column; align-items: center; }
+      .tier { min-width: 0; width: 100%; max-width: 340px; }
     }
   </style>
 </head>
@@ -335,11 +379,27 @@
   <header>
     <h1>Ohad Phoenix Oren</h1>
     <div class="title">AI Systems Architect / App Engineer</div>
-    <div class="rate">$99 / hr</div>
+    <div class="pricing-tiers">
+      <div class="tier tier-green">
+        <span class="tier-rate">$99 / hr</span>
+        <span class="tier-name">Build</span>
+        <span class="tier-desc">Frontend · API integration · UI/UX · Static deployment · Maintenance</span>
+      </div>
+      <div class="tier tier-yellow">
+        <span class="tier-rate">$150 / hr</span>
+        <span class="tier-name">Build + Ship</span>
+        <span class="tier-desc">Full-stack production · React + Python/Node · Database · Cloud · Mobile · Payments · CI/CD</span>
+      </div>
+      <div class="tier tier-red">
+        <span class="tier-rate">$300 / hr</span>
+        <span class="tier-name">Architect</span>
+        <span class="tier-desc">Multi-agent AI orchestration · A2A protocol · Custom LLM systems · Agentic loops · Semantic filtering · Security hardening · Quant signal design · Zero to production</span>
+      </div>
+    </div>
   </header>
 
   <div class="hero-img-wrap">
-    <img src="bool_it_train.png" alt="cC++ bullet train — Covenant Computing" />
+    <img src="bool_it_train.png" alt="High-speed bullet train — fast delivery, every time" />
   </div>
 
   <div class="tabs-wrapper">
@@ -353,145 +413,50 @@
     <div id="skills" class="tab-panel active">
 
       <div class="skills-section">
-        <h2>Production Systems</h2>
+        <h2>AI Architecture</h2>
         <ul class="skills-list">
-          <li>Full-stack web development</li>
-          <li>Web design + UI/UX</li>
-          <li>Dark aesthetic design systems</li>
-          <li>GitHub Pages static deployment</li>
-          <li>Railway cloud deployment (Node.js + Python)</li>
-          <li>Turso (libSQL/SQLite edge database)</li>
-          <li>Custom domain architecture</li>
-          <li>Multi-app platform management</li>
-          <li>Multi-agent AI orchestration</li>
-        </ul>
-      </div>
-
-      <div class="skills-section">
-        <h2>Frontend</h2>
-        <ul class="skills-list">
-          <li>React 19</li>
-          <li>TypeScript</li>
-          <li>JavaScript (ES2024)</li>
-          <li>React Native</li>
-          <li>Expo SDK 54</li>
-          <li>Vite 8</li>
-          <li>ESLint 9</li>
-          <li>HTML5 / CSS3</li>
-          <li>Responsive design</li>
-          <li>Custom component architecture</li>
-          <li>Single-file SPA architecture</li>
-          <li>In-browser markdown rendering</li>
-          <li>Multi-file upload</li>
-          <li>Clipboard image paste</li>
-          <li>TTS integration</li>
-          <li>Auto-expanding textarea</li>
-          <li>Real-time chat UI with stop/cancel controls</li>
-          <li>Chat history with localStorage persistence</li>
-        </ul>
-      </div>
-
-      <div class="skills-section">
-        <h2>Backend</h2>
-        <ul class="skills-list">
-          <li>Node.js 18</li>
-          <li>Express 4</li>
-          <li>Python (FastAPI)</li>
-          <li>REST API design</li>
-          <li>Unified multi-tenant backend architecture</li>
-          <li>Railway deployment + environment management</li>
-          <li>Turso / libSQL / SQLite edge database</li>
-          <li>Persistent memory with auto-compression</li>
-          <li>dotenv / secrets management</li>
-        </ul>
-      </div>
-
-      <div class="skills-section">
-        <h2>AI Integration</h2>
-        <ul class="skills-list">
-          <li>Claude (Anthropic) — production AI backbone</li>
-          <li>Anthropic SDK (direct integration)</li>
-          <li>Prompt engineering (advanced — system prompt architecture)</li>
-          <li>Custom AI chatbot — built from scratch</li>
           <li>Multi-agent swarm orchestration</li>
-          <li>A2A (Agent-to-Agent) protocol — Google standard</li>
-          <li>Agent card / agent registry</li>
-          <li>Semantic filtering</li>
-          <li>Density governor architecture</li>
+          <li>A2A protocol implementation (Google standard)</li>
+          <li>Claude / Anthropic SDK — production backbone</li>
+          <li>Agentic loops with native tool use</li>
+          <li>System prompt architecture</li>
+          <li>Semantic filtering + density governor</li>
           <li>Memory persistence with auto-compression</li>
-          <li>Reorient API (context re-grounding)</li>
-          <li>Claude native tool use / agentic loops</li>
-          <li>Backend AI proxy architecture (no keys in client)</li>
-          <li>Usage-gated AI delivery (freemium enforcement at API layer)</li>
+          <li>AI proxy architecture (zero client-side keys)</li>
           <li>Multi-app AI routing from single backend</li>
         </ul>
       </div>
 
       <div class="skills-section">
-        <h2>Mobile</h2>
+        <h2>Full-Stack Production</h2>
         <ul class="skills-list">
-          <li>React Native</li>
-          <li>Expo EAS Build</li>
-          <li>Apple App Store submission + review cycle</li>
-          <li>Apple App Store rejection resolution</li>
-          <li>EAS environment variable management</li>
-          <li>iOS configuration + deployment</li>
+          <li>React 19 / TypeScript / Vite</li>
+          <li>Python (FastAPI) / Node.js / Express</li>
+          <li>React Native + Expo → shipped to App Store</li>
+          <li>Turso edge database / SQLite</li>
+          <li>Railway cloud deployment</li>
+          <li>Stripe / RevenueCat / PayPal / Square</li>
+          <li>Freemium architecture + subscription entitlements</li>
         </ul>
       </div>
 
       <div class="skills-section">
-        <h2>Payments &amp; Monetization</h2>
-        <ul class="skills-list">
-          <li>RevenueCat (iOS IAP — monthly + annual subscriptions)</li>
-          <li>Stripe</li>
-          <li>PayPal</li>
-          <li>Square</li>
-          <li>Freemium architecture design</li>
-          <li>Usage-count enforcement</li>
-          <li>Subscription entitlement management</li>
-          <li>Multi-tier pricing design</li>
-        </ul>
-      </div>
-
-      <div class="skills-section">
-        <h2>Security</h2>
+        <h2>Cybersecurity</h2>
         <ul class="skills-list">
           <li>API key isolation (zero client-side secrets)</li>
-          <li>Incident response (.p8 private key)</li>
-          <li>.gitignore hardening</li>
-          <li>Threat detection products</li>
-          <li>Link scanning + threat level classification</li>
-          <li>Covenant authentication layer</li>
+          <li>Threat detection + link scanning</li>
           <li>Agent-level access control</li>
+          <li>Incident response</li>
         </ul>
       </div>
 
       <div class="skills-section">
         <h2>Quant / Fintech</h2>
         <ul class="skills-list">
-          <li>Python</li>
-          <li>pandas</li>
-          <li>numpy</li>
-          <li>yfinance</li>
+          <li>Python / pandas / numpy / yfinance</li>
           <li>Quantitative signal design</li>
           <li>Market regime detection</li>
-          <li>Position sizing algorithms</li>
-          <li>VIX / SPY / QQQ data pipelines</li>
-          <li>Adaptive risk allocation systems</li>
-        </ul>
-      </div>
-
-      <div class="skills-section">
-        <h2>DevOps &amp; Tooling</h2>
-        <ul class="skills-list">
-          <li>Git / GitHub</li>
-          <li>GitHub Pages</li>
-          <li>GitHub Actions</li>
-          <li>Railway (Node.js + Python)</li>
-          <li>Turso edge database</li>
-          <li>EAS Build</li>
-          <li>Multi-repo architecture management</li>
-          <li>PR-driven development workflow</li>
+          <li>Position sizing + adaptive risk allocation</li>
         </ul>
       </div>
 
@@ -505,12 +470,8 @@
             <tr><td>JavaScript</td><td>Production</td></tr>
             <tr><td>TypeScript</td><td>Production</td></tr>
             <tr><td>Python</td><td>Production</td></tr>
-            <tr><td>HTML5</td><td>Production</td></tr>
-            <tr><td>CSS3</td><td>Production</td></tr>
             <tr><td>C++</td><td>Proficient</td></tr>
-            <tr><td>Markdown</td><td>Native</td></tr>
             <tr><td>SQL</td><td>Proficient</td></tr>
-            <tr><td>Bash</td><td>Working</td></tr>
             <tr><td>Hebrew</td><td>Fluent</td></tr>
             <tr><td>Spanish</td><td>Fluent</td></tr>
             <tr><td>English</td><td>Native</td></tr>
