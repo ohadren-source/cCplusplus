@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ohad Phoenix Oren — AI Systems Architect</title>
+  <meta name="description" content="Ohad Phoenix Oren — AI Systems Architect &amp; App Engineer. React, TypeScript, Python, Claude AI, multi-agent orchestration. 4 live production apps. $99/hr." />
+  <meta name="keywords" content="AI systems architect, AI app developer, freelance AI engineer, custom AI chatbot developer, React TypeScript Python developer, full stack AI developer, Claude Anthropic integration, A2A agent protocol developer, multi-agent AI orchestration, Railway deployment, React Native iOS developer, fintech quantitative developer, hire AI developer" />
+  <meta property="og:title" content="Ohad Phoenix Oren — AI Systems Architect" />
+  <meta property="og:description" content="4 live production apps. Custom AI chatbots. Multi-agent orchestration. React + Python + Claude. $99/hr." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://isoccpp.org/ohadphoenixoren" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0a;
+      --surface: #111111;
+      --border: #1e1e1e;
+      --accent: #a0b4ff;
+      --accent-dim: #6b82d6;
+      --text: #e8e8e8;
+      --text-muted: #888;
+      --text-faint: #555;
+      --radius: 8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: #fff; text-decoration: underline; }
+
+    /* ── HEADER ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 48px 24px 32px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #fff;
+    }
+
+    header .title {
+      margin-top: 6px;
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    header .rate {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 4px 14px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      letter-spacing: 0.3px;
+    }
+
+    /* ── TABS ── */
+    .tabs-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      padding: 24px 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      padding: 10px 24px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: color 0.15s, border-color 0.15s;
+      margin-bottom: -1px;
+    }
+
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* ── MAIN CONTENT ── */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── SKILLS SECTIONS ── */
+    .skills-section {
+      margin-bottom: 40px;
+    }
+
+    .skills-section h2 {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .skills-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skills-list li {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 5px 12px;
+      font-size: 0.85rem;
+      color: var(--text);
+    }
+
+    /* ── LANGUAGES TABLE ── */
+    .lang-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+
+    .lang-table th {
+      text-align: left;
+      font-size: 0.72rem;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      font-weight: 600;
+      padding: 0 0 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .lang-table td {
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .lang-table td:last-child {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    .lang-table tr:last-child td { border-bottom: none; }
+
+    /* ── PROJECT CARDS ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      transition: border-color 0.15s;
+    }
+
+    .card:hover { border-color: var(--accent-dim); }
+
+    .card .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .card .card-url {
+      font-size: 0.78rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .card .card-url:hover { color: #fff; }
+
+    .card .card-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .card .beta-tag {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 3px 10px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 0.75rem;
+      color: var(--text-faint);
+    }
+
+    /* ── CONTACT ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    footer h2 {
+      font-size: 0.72rem;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 20px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      font-size: 0.9rem;
+    }
+
+    .contact-links a, .contact-links span {
+      color: var(--text-muted);
+    }
+
+    .contact-links a:hover { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .projects-grid { grid-template-columns: 1fr; }
+      .tabs-wrapper { gap: 0; }
+      .tab-btn { padding: 10px 16px; font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ohad Phoenix Oren</h1>
+    <div class="title">AI Systems Architect / App Engineer</div>
+    <div class="rate">$99 / hr</div>
+  </header>
+
+  <div class="tabs-wrapper">
+    <button class="tab-btn active" data-tab="skills">Skills</button>
+    <button class="tab-btn" data-tab="projects">Projects</button>
+  </div>
+
+  <main>
+
+    <!-- ── SKILLS TAB ── -->
+    <div id="skills" class="tab-panel active">
+
+      <div class="skills-section">
+        <h2>Production Systems</h2>
+        <ul class="skills-list">
+          <li>Full-stack web development</li>
+          <li>Web design + UI/UX</li>
+          <li>Dark aesthetic design systems</li>
+          <li>GitHub Pages static deployment</li>
+          <li>Railway cloud deployment (Node.js + Python)</li>
+          <li>Turso (libSQL/SQLite edge database)</li>
+          <li>Custom domain architecture</li>
+          <li>Multi-app platform management</li>
+          <li>Multi-agent AI orchestration</li>
+        </ul>
+      </div>
+
+      <div class="skills-section">
+        <h2>Frontend</h2>
+        <ul class="skills-list">
+          <li>React 19</li>
+          <li>TypeScript</li>
+          <li>JavaScript (ES2024)</li>
+          <li>React Native</li>
+          <li>Expo SDK 54</li>
+          <li>Vite 8</li>
+          <li>ESLint 9</li>
+          <li>HTML5 / CSS3</li>
+          <li>Responsive design</li>
+          <li>Custom component architecture</li>
+          <li>Single-file SPA architecture</li>
+          <li>In-browser markdown rendering</li>
+          <li>Multi-file upload</li>
+          <li>Clipboard image paste</li>
+          <li>TTS integration</li>
+          <li>Auto-expanding textarea</li>
+          <li>Real-time chat UI with stop/cancel controls</li>
+          <li>Chat history with localStorage persistence</li>
+        </ul>
+      </div>
+
+      <div class="skills-section">
+        <h2>Backend</h2>
+        <ul class="skills-list">
+          <li>Node.js 18</li>
+          <li>Express 4</li>
+          <li>Python (FastAPI)</li>
+          <li>REST API design</li>
+          <li>Unified multi-tenant backend architecture</li>
+          <li>Railway deployment + environment management</li>
+          <li>Turso / libSQL / SQLite edge database</li>
+          <li>Persistent memory with auto-compression</li>
+          <li>dotenv / secrets management</li>
+        </ul>
+      </div>
+
+      <div class="skills-section">
+        <h2>AI Integration</h2>
+        <ul class="skills-list">
+          <li>Claude (Anthropic) — production AI backbone</li>
+          <li>Anthropic SDK (direct integration)</li>
+          <li>Prompt engineering (advanced — system prompt architecture)</li>
+          <li>Custom AI chatbot — built from scratch</li>
+          <li>Multi-agent swarm orchestration</li>
+          <li>A2A (Agent-to-Agent) protocol — Google standard</li>
+          <li>Agent card / agent registry</li>
+          <li>Semantic filtering</li>
+          <li>Density governor architecture</li>
+          <li>Memory persistence with auto-compression</li>
+          <li>Reorient API (context re-grounding)</li>
+          <li>Claude native tool use / agentic loops</li>
+          <li>Backend AI proxy architecture (no keys in client)</li>
+          <li>Usage-gated AI delivery (freemium enforcement at API layer)</li>
+          <li>Multi-app AI routing from single backend</li>
+        </ul>
+      </div>
+
+      <div class="skills-section">
+        <h2>Mobile</h2>
+        <ul class="skills-list">
+          <li>React Native</li>
+          <li>Expo EAS Build</li>
+          <li>Apple App Store submission + review cycle</li>
+          <li>Apple App Store rejection resolution</li>
+          <li>EAS environment variable management</li>
+          <li>iOS configuration + deployment</li>
+        </ul>
+      </div>
+
+      <div class="skills-section">
+        <h2>Payments &amp; Monetization</h2>
+        <ul class="skills-list">
+          <li>RevenueCat (iOS IAP — monthly + annual subscriptions)</li>
+          <li>Stripe</li>
+          <li>PayPal</li>
+          <li>Square</li>
+          <li>Freemium architecture design</li>
+          <li>Usage-count enforcement</li>
+          <li>Subscription entitlement management</li>
+          <li>Multi-tier pricing design</li>
+        </ul>
+      </div>
+
+      <div class="skills-section">
+        <h2>Security</h2>
+        <ul class="skills-list">
+          <li>API key isolation (zero client-side secrets)</li>
+          <li>Incident response (.p8 private key)</li>
+          <li>.gitignore hardening</li>
+          <li>Threat detection products</li>
+          <li>Link scanning + threat level classification</li>
+          <li>Covenant authentication layer</li>
+          <li>Agent-level access control</li>
+        </ul>
+      </div>
+
+      <div class="skills-section">
+        <h2>Quant / Fintech</h2>
+        <ul class="skills-list">
+          <li>Python</li>
+          <li>pandas</li>
+          <li>numpy</li>
+          <li>yfinance</li>
+          <li>Quantitative signal design</li>
+          <li>Market regime detection</li>
+          <li>Position sizing algorithms</li>
+          <li>VIX / SPY / QQQ data pipelines</li>
+          <li>Adaptive risk allocation systems</li>
+        </ul>
+      </div>
+
+      <div class="skills-section">
+        <h2>DevOps &amp; Tooling</h2>
+        <ul class="skills-list">
+          <li>Git / GitHub</li>
+          <li>GitHub Pages</li>
+          <li>GitHub Actions</li>
+          <li>Railway (Node.js + Python)</li>
+          <li>Turso edge database</li>
+          <li>EAS Build</li>
+          <li>Multi-repo architecture management</li>
+          <li>PR-driven development workflow</li>
+        </ul>
+      </div>
+
+      <div class="skills-section">
+        <h2>Languages</h2>
+        <table class="lang-table">
+          <thead>
+            <tr><th>Language</th><th>Level</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>JavaScript</td><td>Production</td></tr>
+            <tr><td>TypeScript</td><td>Production</td></tr>
+            <tr><td>Python</td><td>Production</td></tr>
+            <tr><td>HTML5</td><td>Production</td></tr>
+            <tr><td>CSS3</td><td>Production</td></tr>
+            <tr><td>C++</td><td>Proficient</td></tr>
+            <tr><td>Markdown</td><td>Native</td></tr>
+            <tr><td>SQL</td><td>Proficient</td></tr>
+            <tr><td>Bash</td><td>Working</td></tr>
+            <tr><td>Hebrew</td><td>Fluent</td></tr>
+            <tr><td>Spanish</td><td>Fluent</td></tr>
+            <tr><td>English</td><td>Native</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div><!-- /skills -->
+
+    <!-- ── PROJECTS TAB ── -->
+    <div id="projects" class="tab-panel">
+
+      <div class="projects-grid">
+
+        <div class="card">
+          <div class="card-title">sauc-e.com</div>
+          <a class="card-url" href="https://www.sauc-e.com" target="_blank" rel="noopener noreferrer">www.sauc-e.com ↗</a>
+          <div class="card-desc">Parent platform — full-stack web, design, branding, multi-app ecosystem.</div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">CATSUP (3,6,9)</div>
+          <a class="card-url" href="https://www.cats-up.app" target="_blank" rel="noopener noreferrer">www.cats-up.app ↗</a>
+          <div class="card-desc">AI Refinery — learning, Socratic questioning.</div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">RELISH (3,6,9)</div>
+          <a class="card-url" href="https://www.cats-up.fun" target="_blank" rel="noopener noreferrer">www.cats-up.fun ↗</a>
+          <div class="card-desc">AI Refinery — emotional intelligence.</div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">BBQ_e (3,6,9)</div>
+          <a class="card-url" href="https://www.catsup.net" target="_blank" rel="noopener noreferrer">www.catsup.net ↗</a>
+          <div class="card-desc">Safety &amp; Cybersecurity — link threat scanning.</div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Sol Calarbone 8</div>
+          <div class="card-desc">Custom conversational AI companion — beta. Demos upon request.</div>
+          <span class="beta-tag">Beta · Demos upon request</span>
+        </div>
+
+      </div>
+
+    </div><!-- /projects -->
+
+  </main>
+
+  <footer>
+    <h2>Contact</h2>
+    <div class="contact-links">
+      <a href="mailto:ohadphoenixoren@gmail.com">ohadphoenixoren@gmail.com</a>
+      <a href="https://github.com/ohadren-source" target="_blank" rel="noopener noreferrer">github.com/ohadren-source</a>
+      <span>$99 / hr</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btns = document.querySelectorAll('.tab-btn');
+      var panels = document.querySelectorAll('.tab-panel');
+
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var target = btn.getAttribute('data-tab');
+
+          btns.forEach(function (b) { b.classList.remove('active'); });
+          panels.forEach(function (p) { p.classList.remove('active'); });
+
+          btn.classList.add('active');
+          document.getElementById(target).classList.add('active');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
