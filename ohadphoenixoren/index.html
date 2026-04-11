@@ -220,6 +220,47 @@
       color: var(--text-faint);
     }
 
+    /* ── HEADER ICON ── */
+    .header-icon {
+      display: inline-block;
+      vertical-align: middle;
+      width: 28px;
+      height: 28px;
+      margin-right: 10px;
+      border-radius: 4px;
+      opacity: 0.85;
+    }
+
+    /* ── HERO IMAGE ── */
+    .hero-img-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 24px 0;
+    }
+
+    .hero-img-wrap img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    /* ── PROJECT SHOWCASE IMAGE ── */
+    .project-showcase {
+      margin-bottom: 28px;
+    }
+
+    .project-showcase img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
     /* ── CONTACT ── */
     footer {
       border-top: 1px solid var(--border);
@@ -249,6 +290,14 @@
 
     .contact-links a:hover { color: var(--accent); text-decoration: none; }
 
+    .unix-joke {
+      margin-top: 24px;
+      font-size: 0.78rem;
+      color: var(--text-faint);
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 0.3px;
+    }
+
     @media (max-width: 600px) {
       .projects-grid { grid-template-columns: 1fr; }
       .tabs-wrapper { gap: 0; }
@@ -259,10 +308,14 @@
 <body>
 
   <header>
-    <h1>Ohad Phoenix Oren</h1>
+    <h1><img src="0x32.png" alt="" class="header-icon" />Ohad Phoenix Oren</h1>
     <div class="title">AI Systems Architect / App Engineer</div>
     <div class="rate">$99 / hr</div>
   </header>
+
+  <div class="hero-img-wrap">
+    <img src="bool_it_train.png" alt="cC++ bullet train — Covenant Computing" />
+  </div>
 
   <div class="tabs-wrapper">
     <button class="tab-btn active" data-tab="skills">Skills</button>
@@ -445,6 +498,10 @@
     <!-- ── PROJECTS TAB ── -->
     <div id="projects" class="tab-panel">
 
+      <div class="project-showcase">
+        <img src="port_lighthome_alex.png" alt="Lighthouse — portfolio showcase" />
+      </div>
+
       <div class="projects-grid">
 
         <div class="card">
@@ -490,6 +547,7 @@
       <a href="https://github.com/ohadren-source" target="_blank" rel="noopener noreferrer">github.com/ohadren-source</a>
       <span>$99 / hr</span>
     </div>
+    <div class="unix-joke">// There's no place like 127.0.0.1</div>
   </footer>
 
   <script>
