@@ -10,6 +10,7 @@
   <meta property="og:description" content="4 live production apps. Custom AI chatbots. Multi-agent orchestration. React + Python + Claude. $99/hr." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://isoccpp.org/ohadphoenixoren" />
+  <link rel="icon" type="image/png" href="0x32.png" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -105,8 +106,40 @@
       padding: 40px 24px 80px;
     }
 
-    .tab-panel { display: none; }
+    .tab-panel { display: none; position: relative; }
     .tab-panel.active { display: block; }
+
+    /* ── TAB BACKGROUND IMAGES ── */
+    .tab-panel::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.12;
+      pointer-events: none;
+      z-index: 0;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    }
+
+    #skills::before {
+      background-image: url('bool_it_train.png');
+    }
+
+    #projects::before {
+      background-image: url('port_lighthome_alex.png');
+    }
+
+    .tab-panel > * {
+      position: relative;
+      z-index: 1;
+    }
 
     /* ── SKILLS SECTIONS ── */
     .skills-section {
@@ -218,6 +251,41 @@
       border-radius: 20px;
       font-size: 0.75rem;
       color: var(--text-faint);
+    }
+
+    /* ── WOO TRACK ── */
+    .woo-track {
+      margin-top: 48px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      overflow-x: auto;
+    }
+
+    .woo-track .woo-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 16px;
+    }
+
+    .woo-track .woo-label a {
+      color: var(--accent);
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: 400;
+    }
+
+    .woo-track pre {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.8rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      white-space: pre;
+      margin: 0;
     }
 
     /* ── CONTACT ── */
@@ -438,6 +506,30 @@
             <tr><td>English</td><td>Native</td></tr>
           </tbody>
         </table>
+      </div>
+
+      <!-- ── WOO TRACK ── -->
+      <div class="woo-track">
+        <div class="woo-label"><a href="https://janina.cool" target="_blank" rel="noopener noreferrer">janina.cool</a>'s Favorite Woo Track:</div>
+        <pre>
+#!/bin/janina.sh
+#!/bin/janina.sh
+# .sh.U.sh=shush=Double Code of Silence=2x0Merta
+# WOO HOO? WU HU! !(WILL HU NG v1.0.sh -e bangs FROM AMERICAN IDLE)
+# lookin' like da CATS dat gots da CREAM
+# Check It Out Y'All! https://www.sauc-e.com/checkitout
+
+$ git checkout y-all
+cat &gt; C.R.E.A.M.
+.cache/ruins_every_ping_around_me
+$ cli git the money
+$$ build.y-old
+
+$ git add y-all
+# result = add y-all subtract y-all; return y-old
+$ git commit -m "order track=Mordergram by dial-UP M4 Morder Inc. w JZ|DMX|Jah_Ruin RMX by DJ Fritz da Lang Cat"
+$ git push -e
+# woo like whoa? || Chef's Kiss like Baiser d'Escoffier?</pre>
       </div>
 
     </div><!-- /skills -->
