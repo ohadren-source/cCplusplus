@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ohad Phoenix Oren — AI Systems Architect</title>
-  <meta name="description" content="Ohad Phoenix Oren — AI Systems Architect &amp; App Engineer. React, TypeScript, Python, multi-model AI, multi-agent orchestration. 4 live production apps. Solo architect. $99/hr." />
-  <meta name="keywords" content="AI systems architect, AI app developer, freelance AI engineer, custom AI chatbot developer, React TypeScript Python developer, full stack AI developer, model-agnostic AI, GPT, Gemini, Claude, Copilot, multi-provider AI, LLM-agnostic, A2A agent protocol developer, multi-agent AI orchestration, Railway deployment, React Native iOS developer, fintech quantitative developer, hire AI developer" />
+  <meta name="description" content="Ohad Phoenix Oren — AI Systems Architect &amp; App Engineer. React, TypeScript, Python, multi-model AI, multi-agent orchestration. HIPAA-compliant healthcare systems. 5 live production apps + healthcare compliance. Solo architect. $99/hr." />
+  <meta name="keywords" content="AI systems architect, AI app developer, freelance AI engineer, custom AI chatbot developer, React TypeScript Python developer, full stack AI developer, model-agnostic AI, GPT, Gemini, Claude, Copilot, multi-provider AI, LLM-agnostic, A2A agent protocol developer, multi-agent AI orchestration, HIPAA compliance, healthcare systems, fraud detection, immutable audit logging, role-based access control, PostgreSQL, Railway deployment, React Native iOS developer, fintech quantitative developer, hire AI developer" />
   <meta property="og:title" content="Ohad Phoenix Oren — AI Systems Architect" />
-  <meta property="og:description" content="4 live production apps. Custom AI chatbots. Multi-agent orchestration. React + Python + multi-model AI. Solo architect. $99/hr." />
+  <meta property="og:description" content="5 live production apps + healthcare compliance. Custom AI chatbots. Multi-agent orchestration. HIPAA systems. React + Python + multi-model AI. Solo architect. $99/hr." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://isoccpp.org/ohadphoenixoren" />
   <link rel="icon" type="image/png" href="0x32.png" />
@@ -24,7 +24,7 @@
   <meta property="og:image:alt" content="Ohad Phoenix Oren — AI Systems Architect" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ohad Phoenix Oren — AI Systems Architect" />
-  <meta name="twitter:description" content="4 live production apps. Custom AI chatbots. Multi-agent orchestration. React + Python + multi-model AI. Solo architect. $99/hr." />
+  <meta name="twitter:description" content="5 live production apps + healthcare compliance. Multi-agent orchestration. React + Python + multi-model AI. Solo architect. $99/hr." />
   <meta name="twitter:image" content="https://isoccpp.org/ohadphoenixoren/bool_it_train.png" />
   <meta name="twitter:image:alt" content="Ohad Phoenix Oren — AI Systems Architect" />
   <script type="application/ld+json">
@@ -42,15 +42,20 @@
       "Multi-agent orchestration",
       "A2A protocol",
       "LLM-agnostic architecture — Claude, GPT, Gemini, Copilot",
+      "HIPAA compliance architecture",
+      "Immutable audit logging",
+      "Role-based access control",
+      "Fraud detection systems",
       "React",
       "TypeScript",
       "Python",
+      "PostgreSQL",
       "Full-stack production",
       "Cybersecurity",
       "Quant signal design"
     ],
     "image": "https://isoccpp.org/ohadphoenixoren/bool_it_train.png",
-    "description": "AI Systems Architect & App Engineer. 4 live production apps. Custom AI chatbots. Multi-agent orchestration. React + Python + multi-model AI. Solo architect."
+    "description": "AI Systems Architect & App Engineer. 5 live production apps. HIPAA-compliant healthcare systems. Multi-agent orchestration. React + Python + multi-model AI. Solo architect."
   }
   </script>
   <style>
@@ -66,6 +71,8 @@
       --text-muted: #888;
       --text-faint: #555;
       --radius: 8px;
+      --accent-healthcare: #4aa86a;
+      --accent-healthcare-dim: #3d9e5e;
     }
 
     html { scroll-behavior: smooth; }
@@ -216,6 +223,11 @@
       border-bottom: 1px solid var(--border);
     }
 
+    .skills-section h2.healthcare {
+      border-bottom-color: var(--accent-healthcare-dim);
+      color: var(--accent-healthcare);
+    }
+
     .skills-list {
       list-style: none;
       display: flex;
@@ -230,6 +242,12 @@
       padding: 5px 12px;
       font-size: 0.85rem;
       color: var(--text);
+    }
+
+    .skills-list li.healthcare {
+      border-color: var(--accent-healthcare-dim);
+      background: rgba(58, 158, 94, 0.05);
+      color: var(--accent-healthcare);
     }
 
     /* ── LANGUAGES TABLE ── */
@@ -280,6 +298,13 @@
 
     .card:hover { border-color: var(--accent-dim); }
 
+    .card.premium {
+      border-color: var(--accent-healthcare-dim);
+      background: rgba(58, 158, 94, 0.03);
+    }
+
+    .card.premium:hover { border-color: var(--accent-healthcare); }
+
     .card .card-title {
       font-size: 1rem;
       font-weight: 700;
@@ -287,11 +312,19 @@
       margin-bottom: 6px;
     }
 
+    .card.premium .card-title {
+      color: var(--accent-healthcare);
+    }
+
     .card .card-url {
       font-size: 0.78rem;
       color: var(--accent);
       margin-bottom: 10px;
       display: inline-block;
+    }
+
+    .card.premium .card-url {
+      color: var(--accent-healthcare);
     }
 
     .card .card-url:hover { color: #fff; }
@@ -302,7 +335,7 @@
       line-height: 1.5;
     }
 
-    .card .beta-tag {
+    .card .beta-tag, .card .premium-tag {
       display: inline-block;
       margin-top: 10px;
       padding: 3px 10px;
@@ -310,6 +343,11 @@
       border-radius: 20px;
       font-size: 0.75rem;
       color: var(--text-faint);
+    }
+
+    .card .premium-tag {
+      border-color: var(--accent-healthcare-dim);
+      color: var(--accent-healthcare);
     }
 
     /* ── HEADER ICON ── */
@@ -430,7 +468,7 @@
   <header>
     <h1>Ohad Phoenix Oren</h1>
     <div class="title">AI Systems Architect / App Engineer</div>
-    <div class="one-liner">I build production AI apps — solo, zero to deployed. 4 live apps. Model-agnostic.</div>
+    <div class="one-liner">I build production AI apps — solo, zero to deployed. 5 live apps + healthcare compliance. Model-agnostic.</div>
     <div class="pricing-tiers">
       <div class="tier tier-green">
         <span class="tier-rate">$99 / hr</span>
@@ -445,7 +483,7 @@
       <div class="tier tier-red">
         <span class="tier-rate">$300 / hr</span>
         <span class="tier-name">Architect</span>
-        <span class="tier-desc">Multi-agent AI orchestration · A2A protocol · Custom LLM systems · Agentic loops · Semantic filtering · Security hardening · Quant signal design · Zero to production</span>
+        <span class="tier-desc">Multi-agent AI orchestration · HIPAA compliance · Fraud detection · Immutable audit systems · A2A protocol · Custom LLM systems · Government/regulatory systems · Zero to production</span>
       </div>
     </div>
   </header>
@@ -485,10 +523,24 @@
           <li>React 19 / TypeScript / Vite</li>
           <li>Python (FastAPI) / Node.js / Express</li>
           <li>React Native + Expo → shipped to App Store</li>
-          <li>Turso edge database / SQLite</li>
+          <li>PostgreSQL + Turso edge database / SQLite</li>
           <li>Railway cloud deployment</li>
           <li>Stripe / RevenueCat / PayPal / Square</li>
           <li>Freemium architecture + subscription entitlements</li>
+        </ul>
+      </div>
+
+      <div class="skills-section">
+        <h2 class="healthcare">Healthcare & Regulatory Compliance</h2>
+        <ul class="skills-list">
+          <li class="healthcare">HIPAA compliance architecture & security hardening</li>
+          <li class="healthcare">Immutable audit logging & forensic systems (WHO/WHAT/WHEN/WHY)</li>
+          <li class="healthcare">Role-based access control (RBAC) at enterprise scale</li>
+          <li class="healthcare">Data encryption (Fernet AES-128) & de-identification</li>
+          <li class="healthcare">Multi-stakeholder platform architecture</li>
+          <li class="healthcare">Data governance & quality scoring systems</li>
+          <li class="healthcare">Fraud detection & investigation workflows</li>
+          <li class="healthcare">Government/regulatory system integration</li>
         </ul>
       </div>
 
@@ -590,6 +642,12 @@ cat &gt; C.R.E.A.M.
           <span class="beta-tag">Beta · Demos upon request</span>
         </div>
 
+        <div class="card premium">
+          <div class="card-title">TORQ-e</div>
+          <div class="card-desc">Production-ready HIPAA-compliant Medicaid system. 5-card architecture (members, providers, government stakeholder, plan admin, fraud investigation). Immutable audit logging. AI-powered outlier detection & claims analysis. FastAPI + PostgreSQL + React. State DOH integration.</div>
+          <span class="premium-tag">Healthcare Compliance · Production</span>
+        </div>
+
       </div>
 
       <div class="project-showcase" style="margin-top:28px;margin-bottom:0;">
@@ -605,7 +663,7 @@ cat &gt; C.R.E.A.M.
     <div class="contact-links">
       <span>For inquiries please contact Brookie Nola: <a href="mailto:36Nife@gmail.com">36Nife@gmail.com</a></span>
       <a href="https://github.com/ohadren-source" target="_blank" rel="noopener noreferrer">github.com/ohadren-source</a>
-      <span>$99 / hr</span>
+      <span>$99 / hr · Healthcare compliance specialty</span>
     </div>
     <div class="unix-joke">// There's no place like 127.0.0.1</div>
   </footer>
@@ -631,3 +689,4 @@ cat &gt; C.R.E.A.M.
 
 </body>
 </html>
+
